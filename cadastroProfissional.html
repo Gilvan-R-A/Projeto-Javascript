@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/materialize.css">
+    <link rel="stylesheet" href="assets/css/cadastroProfissional.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000">
+    <link rel="apple-touch-icon" href="assets/img/icones/icon-192x192.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <script type="module" src="/controller/ListarCidadeController.js"></script>
+    <title>Cadastro de Profissional </title>
+</head>
+
+<body>
+
+    <!--Navbar-->
+    <div class="navbar-fixed">
+        <nav class="white">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo">
+                        <img src="assets/img/Geribem-logotipos-27-10-20/logotipo-Gilvan-T60.svg" alt="">
+                    </a>
+
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="loginProfissional.html" class="waves-effect waves-light btn">
+                                <i class="material-icons left">account_circle</i>Já sou cadastrado</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!--Primeira linha-->
+    <div class="container altura ">
+        <div class="row">
+            <div class="col s12 l12"></div>
+        </div>
+    </div>
+
+    <!--Primeiro Container-->
+    <div class="container">
+        <div class="row white caixa">
+            <div class="col s12 l12">
+                <div class="row">
+                    <div class="col s12 l12 center-align">
+                        <h3 class="blue-text text-darken-2">Cadastro de Profissional </h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <form class="col s12">
+                        <div class="input-field col s12 l6">
+                            <input placeholder="Digite o seu nome" id="nome" type="text" class="validate">
+                            <label>Nome Completo</label>
+                        </div>
+
+                        <div class="input-field col s12 l6">
+                            <input placeholder="Digite o seu CPF" id="cpf" type="text" class="validate">
+                            <label>CPF</label>
+                        </div>
+
+                </div>
+
+                <!--Gênero e CPF-->
+                <div class="row">
+
+                    <div class="input-field col s12 l6">
+                        <input placeholder="Digite seu telefone" id="telefone" type="text" class="validate">
+                        <label>Telefone</label>
+                    </div>
+
+                    <div class="input-field col s12 l6 ">
+                        <select id="genero">
+                            <option value="" disabled selected></option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Feminino</option>
+                            <option value="3">Outro</option>
+                        </select>
+                        <label>Gênero</label>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="input-field col s12 l4 ">
+                        <select id="formacao">
+                            <option value="" disabled selected></option>
+                            <option value="1">Medicina</option>
+                            <option value="2">Enfermagem</option>
+                            <option value="3">Auxiliar de Enfermagem</option>
+                            <option value="3">Técnico de Enfermagem</option>
+                            <option value="3">Fisioterapia</option>
+                            <option value="3">Nutrição</option>
+                            <option value="3">Cuidador</option>
+                            <option value="3">Outra</option>
+                        </select>
+                        <label>Formação</label>
+                    </div>
+
+                    <div class="input-field col s12 l4 ">
+                        <select id="conselho">
+                            <option value="" disabled selected></option>
+                            <option value="1">COREN</option>
+                            <option value="2">CRM</option>
+                            <option value="3">CRN</option>
+                            <option value="3">COFEN</option>
+                            <option value="3">COFFITO</option>
+                            <option value="3">CREFITTO</option>
+                            <option value="3">Nenhum</option>
+                        </select>
+                        <label>Conselho</label>
+                    </div>
+
+                    <div class="input-field col s12 l4">
+                        <input placeholder="Digite seu número" id="numConselho" type="text" class="validate">
+                        <label>Número do Conselho</label>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                </div>
+
+                <!--terceira linha linha-->
+                <div class="row">
+                    <div class="input-field col s12 l6">
+                        <input placeholder="Rua" id="logradouro" type="text" class="validate">
+                        <label>Logradouro</label>
+                    </div>
+
+                    <div class="input-field col s12 l2">
+                        <input placeholder="Número" id="numero" type="text" class="validate">
+                        <label>Número</label>
+                    </div>
+
+                    <div class="input-field col s12 l4">
+                        <input placeholder="Complemento" id="complemento" type="text" class="validate">
+                        <label>Complemento</label>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12 l6">
+                        <input placeholder="Referência" id="referencia" type="text" class="validate">
+                        <label>Referência</label>
+                    </div>
+
+                    <div class="input-field col s12 l6">
+                        <input placeholder="Bairro" id="bairro" type="text" class="validate">
+                        <label>Bairro</label>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12 l6">
+                        <input placeholder="Digite o seu CEP" id="cep" type="text" class="validate">
+                        <label>CEP</label>
+                    </div>
+
+                    <!--Select dinâmico de cidades-->
+
+                    <div class="col s12 l6">
+                        <div id="divcidades">
+                            <label for="cidade">Cidade</label>
+                            <input list ="cidades" id= "cidade">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12 l6">
+                        <input placeholder="Digite o seu e-mail" id="email" type="email" class="validate">
+                        <label>E-mail</label>
+                    </div>
+
+                    <div class="input-field col s12 l6">
+                        <input placeholder="Digite a sua senha" id="senha" type="password" class="validate">
+                        <label>Senha</label>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                </div>
+
+                <div class="row center-align">
+                    <div class="input-field col s12 l12">
+                        <button class="btn waves-effect #00e676 #00e676 teal lighten-2" id="botao" type="button"
+                            name="action">CADASTRAR</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container altura">
+        <div class="row">
+            <div class="col s12 l12"></div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="page-footer white ">
+        <div class="container">
+            <div class="row">
+
+                <div class="col s12 l4">
+                    <div class="caixaicone">
+                        <i class="fab fa-facebook azul"></i>
+                        <i class="fab fa-instagram-square lilas"></i>
+                        <i class="fab fa-youtube vermelho"></i>
+                        <i class="fab fa-twitter azul"></i>
+                    </div>
+                </div>
+
+                <div class="col l6 s12">
+
+                </div>
+
+            </div>
+        </div>
+        <div class="footer-copyright #eeeeee grey lighten-3">
+            <div class="container ">
+
+                <span class="black-text">
+                    © 2020 Copyright Todos os direitos reservados.
+                </span>
+
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="assets/js/materialize.js"></script>
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.datepicker');
+            var options = [];
+            var instances = M.Datepicker.init(elems, options);
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            var options = [];
+            var instances = M.FormSelect.init(elems, options);
+        });
+    </script>
+
+<script type="module" src="./controller/CadastroProfissionalController.js"></script>
+
+</body>
+
+</html>
